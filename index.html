@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wout Simoen | Bioinformatics</title>
+    <title>Wout Simoen | Bioinformatics Portfolio</title>
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
 
@@ -13,6 +13,7 @@
             --accent: #27ae60; 
             --text: #333;
             --light: #f4f4f4;
+            --white: #ffffff;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,72 +21,119 @@
             color: var(--text);
             margin: 0;
             padding: 0;
+            background-color: #fafafa;
         }
         header {
             background: var(--primary);
             color: white;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             text-align: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 2rem auto;
             padding: 0 2rem;
         }
-        h1 { margin: 0; font-size: 2.5rem; }
-        .subtitle { font-size: 1.2rem; color: #bdc3c7; }
-        section { margin-bottom: 3rem; }
-        h2 { border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
+        h1 { margin: 0; font-size: 2.8rem; letter-spacing: -1px; }
+        .subtitle { font-size: 1.3rem; color: #bdc3c7; margin-top: 10px; }
+        section { margin-bottom: 4rem; }
+        h2 { border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 5px; margin-bottom: 1.5rem; }
+        
+        /* Project Card Styling */
+        .project-card {
+            background: var(--white);
+            border: 1px solid #ddd;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-card h3 { margin-top: 0; color: var(--primary); }
+        
         .skill-tag {
             display: inline-block;
             background: var(--light);
-            padding: 5px 15px;
+            padding: 6px 14px;
             border-radius: 20px;
-            margin: 5px;
-            font-size: 0.9rem;
-            border: 1px solid #ddd;
-            transition: 0.3s;
+            margin: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #eee;
         }
-        .skill-tag:hover {
+
+        .btn {
+            display: inline-block;
             background: var(--accent);
             color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
         }
-        footer { text-align: center; padding: 2rem; background: var(--light); font-size: 0.8rem; }
+        .btn:hover { background: #219150; }
+
+        /* Contact Section */
+        .contact-list { list-style: none; padding: 0; }
+        .contact-list li { margin-bottom: 10px; font-size: 1.1rem; }
+        .contact-list a { color: var(--accent); text-decoration: none; font-weight: bold; }
+
+        footer { text-align: center; padding: 3rem; background: var(--primary); color: white; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Wout Simoen</h1>
-    <p class="subtitle">MSc Student in Bioinformatics</p>
+    <p class="subtitle">MSc Student in Bioinformatics at KU Leuven</p>
 </header>
 
 <div class="container">
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a Master's student in Bioinformatics, focused on bridging the gap between biological data and computational insights. I enjoy developing efficient pipelines and exploring genomic datasets.</p>
+        <p>I am a first-year Master's student in Bioinformatics, passionate about the synergy between biological systems and computational modeling. My focus lies in developing efficient data pipelines and exploring complex genomic networks to derive meaningful biological insights.</p>
     </section>
 
     <section id="skills">
-        <h2>Technical Skills</h2>
+        <h2>Technical Expertise</h2>
         <div>
-            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Python (NumPy, SciPy)</span>
             <span class="skill-tag">R / Bioconductor</span>
             <span class="skill-tag">Bash / Linux</span>
+            <span class="skill-tag">Graph Theory</span>
             <span class="skill-tag">Genomics</span>
-            <span class="skill-tag">Data Visualization</span>
             <span class="skill-tag">Machine Learning</span>
         </div>
     </section>
 
     <section id="projects">
-        <h2>Current Projects</h2>
-        <p>I am currently working on various academic projects within my Master's program. Check back soon for updates on my research and code implementations.</p>
+        <h2>Selected Projects</h2>
+        <div class="project-card">
+            <h3>YeastNet Protein Network Analysis</h3>
+            <p>A computational tool for parsing and analyzing protein-protein interaction networks. This project utilizes spectral graph theory to evaluate network topology and identify functional protein clusters.</p>
+            <ul>
+                <li>Implemented <strong>Graph Laplacian matrices</strong> to identify connected components.</li>
+                <li>Developed algorithms for <strong>clustering coefficient</strong> calculation and clique detection.</li>
+                <li>Optimized for high-confidence biological datasets (YeastNet v3).</li>
+            </ul>
+            <a href="https://github.com/WoutSimoen/protein-network-analysis" target="_blank" class="btn">View Code on GitHub</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out for collaborations or inquiries regarding my work.</p>
+        <ul class="contact-list">
+            <li>📧 Email: <a href="mailto:wout.simoen@student.kuleuven.be">wout.simoen@student.kuleuven.be</a></li>
+            <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/woutsimoen" target="_blank">linkedin.com/in/woutsimoen</a></li>
+            <li>💻 GitHub: <a href="https://github.com/WoutSimoen" target="_blank">github.com/WoutSimoen</a></li>
+        </ul>
     </section>
 </div>
 
 <footer>
-    &copy; 2026 Wout Simoen - Built with GitHub Pages
+    &copy; 2026 Wout Simoen | MSc Bioinformatics Portfolio
 </footer>
 
 </body>
