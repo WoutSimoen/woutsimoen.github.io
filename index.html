@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wout Simoen | Bio-informatica</title>
+    <title>Wout Simoen | Bioinformatics</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
+
     <style>
         :root {
             --primary: #2c3e50;
-            --accent: #27ae60; /* Een 'bio' groen accent */
+            --accent: #27ae60; 
             --text: #333;
             --light: #f4f4f4;
         }
@@ -41,6 +44,11 @@
             margin: 5px;
             font-size: 0.9rem;
             border: 1px solid #ddd;
+            transition: 0.3s;
+        }
+        .skill-tag:hover {
+            background: var(--accent);
+            color: white;
         }
         footer { text-align: center; padding: 2rem; background: var(--light); font-size: 0.8rem; }
     </style>
@@ -49,35 +57,35 @@
 
 <header>
     <h1>Wout Simoen</h1>
-    <p class="subtitle">Master Student Bioinformatics</p>
+    <p class="subtitle">MSc Student in Bioinformatics</p>
 </header>
 
 <div class="container">
     <section id="about">
-        <h2>Over mij</h2>
-        <p>Welkom op mijn GitHub-pagina. Ik ben een Masterstudent Bio-informatica met een passie voor de combinatie van biologie, data-analyse en softwareontwikkeling.</p>
+        <h2>About Me</h2>
+        <p>I am a Master's student in Bioinformatics, focused on bridging the gap between biological data and computational insights. I enjoy developing efficient pipelines and exploring genomic datasets.</p>
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
+        <h2>Technical Skills</h2>
         <div>
             <span class="skill-tag">Python</span>
-            <span class="skill-tag">R</span>
-            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">R / Bioconductor</span>
+            <span class="skill-tag">Bash / Linux</span>
             <span class="skill-tag">Genomics</span>
-            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Data Visualization</span>
             <span class="skill-tag">Machine Learning</span>
         </div>
     </section>
 
     <section id="projects">
-        <h2>Projecten</h2>
-        <p>Binnenkort verschijnen hier mijn belangrijkste academische en persoonlijke projecten.</p>
+        <h2>Current Projects</h2>
+        <p>I am currently working on various academic projects within my Master's program. Check back soon for updates on my research and code implementations.</p>
     </section>
 </div>
 
 <footer>
-    &copy; 2026 Wout Simoen - Gebouwd met GitHub Pages
+    &copy; 2026 Wout Simoen - Built with GitHub Pages
 </footer>
 
 </body>
