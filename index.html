@@ -39,7 +39,24 @@
         section { margin-bottom: 4rem; }
         h2 { border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 5px; margin-bottom: 1.5rem; }
         
-        /* Project Card Styling */
+        /* Skills Tags */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-tag {
+            background: var(--white);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .skill-tag.hpc { border-left: 4px solid var(--accent); }
+
+        /* Project Card */
         .project-card {
             background: var(--white);
             border: 1px solid #ddd;
@@ -51,17 +68,6 @@
         .project-card:hover { transform: translateY(-5px); }
         .project-card h3 { margin-top: 0; color: var(--primary); }
         
-        .skill-tag {
-            display: inline-block;
-            background: var(--light);
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid #eee;
-        }
-
         .btn {
             display: inline-block;
             background: var(--accent);
@@ -76,7 +82,7 @@
 
         /* Contact Section */
         .contact-list { list-style: none; padding: 0; }
-        .contact-list li { margin-bottom: 10px; font-size: 1.1rem; }
+        .contact-list li { margin-bottom: 12px; font-size: 1.1rem; }
         .contact-list a { color: var(--accent); text-decoration: none; font-weight: bold; }
 
         footer { text-align: center; padding: 3rem; background: var(--primary); color: white; font-size: 0.9rem; }
@@ -92,18 +98,19 @@
 <div class="container">
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a first-year Master's student in Bioinformatics, passionate about the synergy between biological systems and computational modeling. My focus lies in developing efficient data pipelines and exploring complex genomic networks to derive meaningful biological insights.</p>
+        <p>I am a first-year Master's student in Bioinformatics, focused on the intersection of biology, mathematics, and high-performance computing. I have a strong interest in genomic data analysis and the computational modeling of complex biological systems.</p>
     </section>
 
     <section id="skills">
-        <h2>Technical Expertise</h2>
-        <div>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
             <span class="skill-tag">Python (NumPy, SciPy)</span>
             <span class="skill-tag">R / Bioconductor</span>
             <span class="skill-tag">Bash / Linux</span>
+            <span class="skill-tag hpc">HPC & Slurm (VSC Clusters)</span>
+            <span class="skill-tag hpc">HMMER (Profile HMMs)</span>
             <span class="skill-tag">Graph Theory</span>
             <span class="skill-tag">Genomics</span>
-            <span class="skill-tag">Machine Learning</span>
         </div>
     </section>
 
@@ -111,19 +118,24 @@
         <h2>Selected Projects</h2>
         <div class="project-card">
             <h3>YeastNet Protein Network Analysis</h3>
-            <p>A computational tool for parsing and analyzing protein-protein interaction networks. This project utilizes spectral graph theory to evaluate network topology and identify functional protein clusters.</p>
+            <p>Developed a computational tool to analyze protein-protein interaction networks. The project leverages spectral graph theory and clustering algorithms to identify functional protein complexes.</p>
             <ul>
-                <li>Implemented <strong>Graph Laplacian matrices</strong> to identify connected components.</li>
-                <li>Developed algorithms for <strong>clustering coefficient</strong> calculation and clique detection.</li>
-                <li>Optimized for high-confidence biological datasets (YeastNet v3).</li>
+                <li>Utilized <strong>Graph Laplacian matrices</strong> for network connectivity analysis.</li>
+                <li>Calculated <strong>clustering coefficients</strong> for identifying protein neighborhoods.</li>
+                <li>Optimized for the YeastNet v3 dataset.</li>
             </ul>
-            <a href="https://github.com/WoutSimoen/protein-network-analysis" target="_blank" class="btn">View Code on GitHub</a>
+            <a href="https://github.com/WoutSimoen/protein-network-analysis" target="_blank" class="btn">View on GitHub</a>
         </div>
+    </section>
+
+    <section id="experience">
+        <h2>Computational Experience</h2>
+        <p>Experienced in working with <strong>High-Performance Computing (HPC)</strong> environments, specifically the <strong>VSC (Vlaams Supercomputer Centrum)</strong>. Skilled in writing Slurm job scripts for scalable bioinformatics workflows, including profile HMM searches and large-scale data processing.</p>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Feel free to reach out for collaborations or inquiries regarding my work.</p>
+        <p>I'm always open to discussing bioinformatics projects or research opportunities.</p>
         <ul class="contact-list">
             <li>📧 Email: <a href="mailto:wout.simoen@student.kuleuven.be">wout.simoen@student.kuleuven.be</a></li>
             <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/woutsimoen" target="_blank">linkedin.com/in/woutsimoen</a></li>
@@ -133,7 +145,7 @@
 </div>
 
 <footer>
-    &copy; 2026 Wout Simoen | MSc Bioinformatics Portfolio
+    &copy; 2026 Wout Simoen | Built with GitHub Pages
 </footer>
 
 </body>
